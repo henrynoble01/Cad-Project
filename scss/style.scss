@@ -1,0 +1,78 @@
+@import "./variable";
+@import "./resets";
+
+body {
+  background: linear-gradient(to bottom, $light-blue, $dark-blue);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (min-width: 576px) {
+    & {
+      max-width: 540px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    & {
+      max-width: 720px;
+    }
+  }
+
+  @media (min-width: 992px) {
+    & {
+      max-width: 960px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    & {
+      max-width: 1140px;
+    }
+  }
+}
+
+.nav {
+  background: $sky-blue;
+  padding: 10px 0;
+  .content {
+    display: flex;
+  }
+
+  .left-nav {
+    display: flex;
+    gap: 10px;
+    .img-control {
+      width: 80px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .right-nav {
+    margin-left: auto;
+
+    .nav-list {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+
+      .nav-list-item {
+        font-size: 14px;
+      }
+    }
+
+    .down::after {
+      content: url("../img/arrow_down.svg");
+      padding-left: 5px;
+    }
+  }
+}
