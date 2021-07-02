@@ -143,10 +143,14 @@ body {
 .modal-device-display {
   background-color: $bg-modal;
   float: right;
-  width: calc(100% - 30%);
+  width: calc(100% - 40px);
   position: relative;
   top: 45px;
   padding: 0 15px;
+  display: none;
+  &.show-modal {
+    display: block;
+  }
 
   .top-header {
     margin-top: 10px;
@@ -210,6 +214,7 @@ body {
     display: grid;
     grid-template-columns: repeat(3, minmax(200px, 300px));
     grid-template-rows: auto;
+    gap: 10px;
 
     .list-item {
       padding: 5px 7px 7px 10px;
