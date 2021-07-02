@@ -1,0 +1,5 @@
+
+# where to add the hidden class in
+class ".head" > .hidden
+class .list-text > .hidden
+class .side-nav > .hidden

@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
 }
 
 body {
@@ -14,8 +15,6 @@ body {
 
 .container {
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -84,3 +83,181 @@ body {
   content: url("../img/arrow_down.svg");
   padding-left: 5px;
 }
+
+.side-nav {
+  width: 30%;
+  box-shadow: 10px 0px 6px -1px rgba(0, 0, 0, 0.24);
+  color: #ffffff;
+  height: calc(100vh - 40px);
+  float: left;
+}
+
+.side-nav.hidden {
+  width: max-content;
+}
+
+.side-nav .angle-left {
+  width: 40px;
+  visibility: hidden;
+}
+
+.side-nav .angle-left img {
+  width: 100%;
+}
+
+.side-nav .angle-left.hidden {
+  visibility: visible;
+}
+
+.side-nav .nav-group {
+  background-color: rgba(116, 187, 237, 0.1);
+}
+
+.side-nav .nav-group .head {
+  margin-bottom: 15px;
+  outline: 0.4px solid #555;
+  padding: 4px 0 4px 15px;
+}
+
+.side-nav .nav-group .head.hidden {
+  display: none;
+}
+
+.side-nav .nav-group .side-list {
+  list-style: none;
+}
+
+.side-nav .nav-group .side-list-item {
+  display: flex;
+}
+
+.side-nav .nav-group .side-list-item .img-control {
+  width: 30px;
+  padding: 4px;
+}
+
+.side-nav .nav-group .side-list-item .img-control img {
+  width: 100%;
+}
+
+.side-nav .nav-group .side-list-item .list-text {
+  padding-top: 5px;
+  padding-left: 5px;
+}
+
+.side-nav .nav-group .side-list-item .hidden {
+  display: none;
+}
+
+.modal-device-display {
+  background-color: #e0eaf1;
+  float: right;
+  width: calc(100% - 30%);
+  position: relative;
+  top: 45px;
+  padding: 0 15px;
+}
+
+.modal-device-display .top-header {
+  margin-top: 10px;
+  display: flex;
+  border-bottom: 1px solid #ccc;
+}
+
+.modal-device-display .top-header .left-side {
+  font-weight: 300;
+  color: #222;
+}
+
+.modal-device-display .top-header .left-side p {
+  font-size: 12px;
+}
+
+.modal-device-display .top-header .right-side {
+  margin-left: auto;
+  background: #fff;
+  font-size: 12px;
+  padding: 4px 4px;
+  height: max-content;
+}
+
+.modal-device-display .middle-options {
+  background: #cad9df;
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.modal-device-display .middle-options .right-side {
+  margin-left: auto;
+  background: #ccc;
+}
+
+.modal-device-display .middle-options .right-side button {
+  background: blue;
+  border: none;
+  color: #ffffff;
+}
+
+.modal-device-display .middle-options .right-side button img {
+  width: 15px;
+  vertical-align: middle;
+}
+
+.modal-device-display .middle-options .right-side .blue-btn-2 {
+  padding: 2px;
+}
+
+.modal-device-display .middle-options .right-side .btn-container {
+  display: inline-block;
+  background: #e0eaf1;
+  border: 1px solid;
+  padding: 0 5px;
+}
+
+.grid-area .device-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 300px));
+  grid-template-rows: auto;
+}
+
+.grid-area .device-list .list-item {
+  padding: 5px 7px 7px 10px;
+  position: relative;
+  background: #d4dde2;
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.75);
+  display: flex;
+}
+
+.grid-area .device-list .list-item .icons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.grid-area .device-list .list-item .icons img {
+  width: 10px;
+}
+
+.grid-area .device-list .list-item .img-control {
+  width: 20%;
+}
+
+.grid-area .device-list .list-item .img-control img {
+  width: 80%;
+}
+
+.grid-area .device-list .list-item .device-details {
+  width: 80%;
+}
+
+.grid-area .device-list .list-item .device-details .name {
+  color: #60bde8;
+}
+
+.grid-area .device-list .list-item .device-details span {
+  display: block;
+  font-size: 12px;
+  font-weight: 400;
+}
+/*# sourceMappingURL=style.css.map */

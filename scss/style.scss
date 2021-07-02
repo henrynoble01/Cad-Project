@@ -2,15 +2,15 @@
 @import "./resets";
 
 body {
-  background: linear-gradient(to bottom, $light-blue, $dark-blue);
+  background: linear-gradient(to bottom, $bg-light-blue, $bg-dark-blue);
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
 .container {
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  // padding-right: 15px;
+  // padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
 
@@ -40,7 +40,7 @@ body {
 }
 
 .nav {
-  background: $sky-blue;
+  background: $bg-sky-blue;
   padding: 10px 0;
   .content {
     display: flex;
@@ -73,6 +73,178 @@ body {
     .down::after {
       content: url("../img/arrow_down.svg");
       padding-left: 5px;
+    }
+  }
+}
+
+.side-nav {
+  width: 30%;
+  //   border-right: 1px solid #000;
+  box-shadow: 10px 0px 6px -1px rgba(0, 0, 0, 0.24);
+  // padding-top: 30px;
+  color: $clr-white;
+  height: calc(100vh - 40px);
+  //   opacity: 0.1;
+  float: left;
+
+  &.hidden {
+    width: max-content;
+  }
+
+  .angle-left {
+    width: 40px;
+    // display: none;
+    visibility: hidden;
+    img {
+      width: 100%;
+    }
+
+    &.hidden {
+      visibility: visible;
+    }
+  }
+
+  .nav-group {
+    background-color: rgba(#74bbed, 0.1);
+    .head {
+      margin-bottom: 15px;
+      outline: 0.4px solid #555;
+      padding: 4px 0 4px 15px;
+      &.hidden {
+        display: none;
+      }
+    }
+    .side-list {
+      list-style: none;
+    }
+    .side-list-item {
+      display: flex;
+      //   gap: 10px;
+
+      .img-control {
+        width: 30px;
+        padding: 4px;
+        img {
+          width: 100%;
+        }
+      }
+      .list-text {
+        padding-top: 5px;
+        padding-left: 5px;
+      }
+
+      .hidden {
+        display: none;
+      }
+    }
+  }
+}
+
+.modal-device-display {
+  background-color: $bg-modal;
+  float: right;
+  width: calc(100% - 30%);
+  position: relative;
+  top: 45px;
+  padding: 0 15px;
+
+  .top-header {
+    margin-top: 10px;
+    display: flex;
+    border-bottom: 1px solid #ccc;
+
+    .left-side {
+      font-weight: 300;
+      color: #222;
+      p {
+        font-size: 12px;
+      }
+    }
+
+    .right-side {
+      margin-left: auto;
+      background: $bg-white;
+      font-size: 12px;
+      padding: 4px 4px;
+      height: max-content;
+    }
+  }
+
+  .middle-options {
+    background: $bg-modal-off;
+    display: flex;
+    margin-bottom: 25px;
+    // gap: 0;
+
+    .right-side {
+      margin-left: auto;
+      background: #ccc;
+      button {
+        background: blue;
+        border: none;
+        color: $clr-white;
+
+        img {
+          width: 15px;
+          vertical-align: middle;
+        }
+      }
+
+      .blue-btn-2 {
+        padding: 2px;
+      }
+
+      .btn-container {
+        display: inline-block;
+        background: $bg-modal;
+        border: 1px solid;
+        padding: 0 5px;
+      }
+    }
+  }
+}
+
+.grid-area {
+  .device-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 300px));
+    grid-template-rows: auto;
+
+    .list-item {
+      padding: 5px 7px 7px 10px;
+      position: relative;
+      background: $bg-offline;
+      box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.75);
+      display: flex;
+
+      .icons {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        img {
+          width: 10px;
+        }
+      }
+
+      .img-control {
+        width: 20%;
+        img {
+          width: 80%;
+        }
+      }
+
+      .device-details {
+        width: 80%;
+        .name {
+          color: $btn-bg-blue;
+        }
+        span {
+          display: block;
+          font-size: 12px;
+          font-weight: 400;
+        }
+      }
     }
   }
 }

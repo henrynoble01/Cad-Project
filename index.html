@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
     <title>Document</title>
   </head>
   <body>
@@ -28,78 +33,152 @@
         </div>
       </nav>
 
-      <div class="side-nav">
-        <div class="nav-group">
-          <p class="head">Smart Wi-Fi Tools</p>
-          <ul class="side-list">
-            <li class="side-list-item">
-              <div class="img-control">
-                <img src="./img/speed_test.svg" alt="" />
-              </div>
-              <span class="list-text"> Device List </span>
-            </li>
-            <li class="side-list-item">
-              <div class="img-control">
-                <img src="./img/speed_test.svg" alt="" />
-              </div>
-              <span class="list-text"> Device List </span>
-            </li>
-            <li class="side-list-item">
-              <div class="img-control">
-                <img src="./img/speed_test.svg" alt="" />
-              </div>
-              <span class="list-text"> Device List </span>
-            </li>
-            <li class="side-list-item">
-              <div class="img-control">
-                <img src="./img/speed_test.svg" alt="" />
-              </div>
-              <span class="list-text"> Device List </span>
-            </li>
-            <li class="side-list-item">
-              <div class="img-control">
-                <img src="./img/speed_test.svg" alt="" />
-              </div>
-              <span class="list-text"> Device List </span>
-            </li>
-            <li class="side-list-item">
-              <div class="img-control">
-                <img src="./img/speed_test.svg" alt="" />
-              </div>
-              <span class="list-text"> Device List </span>
-            </li>
-          </ul>
+      <main class="main-content container">
+        <!--  -->
+        <div class="side-nav">
+          <div class="angle-left">
+            <img src="./img/Angle_left.svg" alt="" />
+          </div>
+          <div class="nav-group">
+            <p class="head">Smart Wi-Fi Tools</p>
+            <ul class="side-list">
+              <li class="side-list-item">
+                <div class="img-control">
+                  <img src="./img/speed_test.svg" alt="" />
+                </div>
+                <span class="list-text"> Device List </span>
+              </li>
+              <li class="side-list-item">
+                <div class="img-control">
+                  <img src="./img/speed_test.svg" alt="" />
+                </div>
+                <span class="list-text"> Guest Access </span>
+              </li>
+              <li class="side-list-item">
+                <div class="img-control">
+                  <img src="./img/speed_test.svg" alt="" />
+                </div>
+                <span class="list-text"> Parental Control </span>
+              </li>
+              <li class="side-list-item">
+                <div class="img-control">
+                  <img src="./img/speed_test.svg" alt="" />
+                </div>
+                <span class="list-text"> Medai Prioritizaion </span>
+              </li>
+              <li class="side-list-item">
+                <div class="img-control">
+                  <img src="./img/speed_test.svg" alt="" />
+                </div>
+                <span class="list-text"> Speed Test </span>
+              </li>
+              <li class="side-list-item">
+                <div class="img-control">
+                  <img src="./img/speed_test.svg" alt="" />
+                </div>
+                <span class="list-text"> External Storage </span>
+              </li>
+            </ul>
+          </div>
+          <div class="nav-group">
+            <p class="head">Router Settings</p>
+            <ul class="side-list">
+              <li class="side-list-item">
+                <div class="img-control">
+                  <img src="./img/speed_test.svg" alt="" />
+                </div>
+                <span class="list-text"> Conectivity </span>
+              </li>
+              <li class="side-list-item">
+                <div class="img-control">
+                  <img src="./img/speed_test.svg" alt="" />
+                </div>
+                <span class="list-text"> TroubleShooting </span>
+              </li>
+              <li class="side-list-item">
+                <div class="img-control">
+                  <img src="./img/speed_test.svg" alt="" />
+                </div>
+                <span class="list-text"> Wireless </span>
+              </li>
+              <li class="side-list-item">
+                <div class="img-control">
+                  <img src="./img/speed_test.svg" alt="" />
+                </div>
+                <span class="list-text"> Security </span>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="nav-group">
-          <p class="head">Smart Wi-Fi Tools</p>
-          <ul class="side-list">
-            <li class="side-list-item">
-              <div class="img-control">
-                <img src="./img/speed_test.svg" alt="" />
+        <!--  -->
+        <div class="modal-device-display">
+          <div class="top-header">
+            <div class="left-side">
+              <h2>Device List</h2>
+              <p>view a list of connected devices and their status</p>
+            </div>
+            <div class="right-side">
+              <input type="checkbox" name="" id="" />
+              <span> show widjet on the home page</span>
+            </div>
+          </div>
+          <div class="middle-options">
+            <div class="left-side">
+              <button class="user-mode">My Network</button>
+              <button class="user-mode">Guest Network</button>
+            </div>
+            <div class="right-side">
+              <div class="btn-container">
+                <button class="blue-btn">
+                  <img src="./img/add_icon.svg" alt="" /> Add a Device
+                </button>
               </div>
-              <span class="list-text"> Device List </span>
-            </li>
-            <li class="side-list-item">
-              <div class="img-control">
-                <img src="./img/speed_test.svg" alt="" />
+              <div class="btn-container">
+                <button class="blue-btn blue-btn-2">
+                  <img src="./img/reload.svg" alt="" />
+                </button>
               </div>
-              <span class="list-text"> Device List </span>
-            </li>
-            <li class="side-list-item">
-              <div class="img-control">
-                <img src="./img/speed_test.svg" alt="" />
-              </div>
-              <span class="list-text"> Device List </span>
-            </li>
-            <li class="side-list-item">
-              <div class="img-control">
-                <img src="./img/speed_test.svg" alt="" />
-              </div>
-              <span class="list-text"> Device List </span>
-            </li>
-          </ul>
+            </div>
+          </div>
+          <div class="grid-area">
+            <ul class="device-list">
+              <!-- device list -->
+              <li class="list-item">
+                <div class="img-control">
+                  <img src="./img/IPhone.svg" alt="" />
+                </div>
+                <div class="device-details">
+                  <span class="name"> Android </span>
+                  <span class="status"> Offline </span>
+                </div>
+                <div class="icons">
+                  <img src="./img/close_icon.svg" alt="" />
+                  <img src="./img/Info.svg" alt="" />
+                </div>
+              </li>
+              <!-- device list -->
+              <!-- device list -->
+              <li class="list-item">
+                <div class="img-control">
+                  <img src="./img/IPhone.svg" alt="" />
+                </div>
+                <div class="device-details">
+                  <span class="name"> Android </span>
+                  <span class="status"> Offline </span>
+                </div>
+                <div class="icons">
+                  <img src="./img/close_icon.svg" alt="" />
+                  <img src="./img/Info.svg" alt="" />
+                </div>
+              </li>
+              <!-- device list -->
+            </ul>
+          </div>
         </div>
-      </div>
+        <!--  -->
+      </main>
     </div>
+
+    <script src="index.js"></script>
   </body>
 </html>
