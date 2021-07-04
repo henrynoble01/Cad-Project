@@ -39,6 +39,11 @@ body {
   }
 }
 
+@mixin btn-style {
+  background: linear-gradient(to bottom, pink, blue);
+  color: $clr-white;
+}
+
 .nav {
   background: $bg-sky-blue;
   padding: 10px 0;
@@ -129,7 +134,16 @@ body {
     }
     .side-list-item {
       display: flex;
+      cursor: pointer;
       //   gap: 10px;
+
+      &.clicked {
+        background: linear-gradient(to bottom, $bg-light-blue, $bg-dark-blue);
+      }
+
+      &:hover {
+        background: linear-gradient(to bottom, $bg-light-blue, $bg-dark-blue);
+      }
 
       .img-control {
         width: 30px;
@@ -160,6 +174,21 @@ body {
   display: none;
   &.show-modal {
     display: block;
+    margin-bottom: 30px;
+  }
+
+  .close-modal {
+    height: 10px;
+    .img-control {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      // background: #999;
+      width: 10px;
+      img {
+        width: 10px;
+      }
+    }
   }
 
   .top-header {
@@ -190,13 +219,22 @@ body {
     margin-bottom: 25px;
     // gap: 0;
 
+    .left-side {
+      .user-mode {
+        // background-color: pink;
+        // @include btn-style;
+        background: #ccc;
+      }
+    }
+
     .right-side {
       margin-left: auto;
       background: #ccc;
       button {
-        background: blue;
+        // background: blue;
+        @include btn-style;
         border: none;
-        color: $clr-white;
+        // color: $clr-white;
 
         img {
           width: 15px;
@@ -271,5 +309,20 @@ body {
         }
       }
     }
+  }
+}
+
+.bottom-section {
+  border-top: 1px solid #ccc;
+  height: 40px;
+  position: relative;
+  padding: 10px;
+
+  .gen-btn {
+    position: absolute;
+    right: 0;
+    padding: 0px 25px;
+    @include btn-style;
+    cursor: pointer;
   }
 }

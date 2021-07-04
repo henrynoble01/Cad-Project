@@ -13,15 +13,17 @@ let deviceList = document.querySelector('.device-list')
 let deviceData = document.querySelector('.device-data')
 console.log(deviceData  );
 
-
+// only allows the specific item to be clicked
 deviceData.addEventListener('click', ()=> {
   userDevice.classList.toggle('show-modal');
 })
 
 showGrid.forEach(element =>  {
-    element.addEventListener('click', () => {
+    element.addEventListener('click', (e) => {
         angleIcon.classList.toggle('hidden');
-        // console.log(element);
+        // 
+        let selected = e.currentTarget
+        selected.classList.toggle('clicked')
         // 
         head.forEach(item => {
             item.classList.toggle('hidden');
@@ -82,3 +84,7 @@ function createDeviceProfile(param){
     }).join('')
     deviceList.innerHTML += singleItem
 }
+
+document.querySelector('.gen-btn').addEventListener('click', ()=>{
+    userDevice.classList.remove('show-modal');
+})
