@@ -3,3 +3,4 @@
 class ".head" > .hidden
 class .list-text > .hidden
 class .side-nav > .hidden
+class .angle-left > .hidden
