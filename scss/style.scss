@@ -1,5 +1,6 @@
 @import "./variable";
 @import "./resets";
+@import "./input";
 
 body {
   background: linear-gradient(to bottom, $bg-light-blue, $bg-dark-blue);
@@ -167,15 +168,18 @@ body {
 .modal-device-display {
   background-color: $bg-modal;
   float: right;
-  width: calc(100% - 40px);
   position: relative;
   top: 45px;
-  padding: 0 15px;
-  display: none;
+  // display: none;
+  width: 0;
+  overflow: hidden;
+  transition: all 2s ease-in-out;
   &.show-modal {
+    width: calc(100% - 40px);
     display: block;
     margin-bottom: 30px;
-    // transition: all 2s ease-in-out;
+    padding: 0 15px;
+    transition: all 2s ease-in-out;
   }
 
   .close-modal {
